@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Spic&middot;E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention</title>
+<!--    <link rel="icon" href="../pics/wis_logo.jpg">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link href="./style.css" rel="stylesheet" type="text/css">
+</head>
+<script type="text/javascript">
+    src=hover.js;
+</script>
+<body>
+	<button style="position: fixed;right: 15px;top:  50%;height: 100px;width: 140px; font-size: 20px;" type="button"><a href="#top">Back to top</a></button>
+<div class="page-container" >
+  <h1 align="center">Spic&middot;E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention</h1>
+  <h2 align="center">Supplementary Material</h2>
+	
+  <p align="center">&nbsp;</p>	
+  <h5 align="left">
+    Click below to view our interactive results, comparisons and ablations:
+  </h5>
+	<a href="#top"></a>
+  <ul>
+	<li><a href="index.html">Our Results</a></li>
+	<li><a href="sections/comparisons_shape.html">Comparisons - Semantic Shape Editing</a></li>
+    <li><a href="sections/comparisons_abstract.html">Comparisons - Text-Conditional Abstraction-to-3D</a></li>
+    <li><a href="sections/comparisons_style.html">Comparisons - 3D Stylization</a></li>
+	<li><a href="sections/ablations.html">Ablations</a></li>
+  </ul>
+    <p align="left">
+    Please refer to the accompanying <a href="supplementary.pdf">PDF</a> document for additional details, comparisons and ablations.
+  </p>
+
+  <!------------------ BEGIN SECTION ------------------>
+
+  <p>&nbsp;</p>
+  <hr>
+
+  <h2 id="our_results_container" align="left"><a name="image-results" id="image-results"></a>Our Results</h2>
+
+
+  <p align="left">
+    Sample results from our framework over all three presented tasks.<br>
+      We show the guidance shape (denoted by <span class="video-label">Guidance</span>) alongside the output
+      shape (denoted by <span class="video-label">Output</span>).<br>
+      Text prompts are colored according to the associated task, with <span class="prompt_title_green">semantic shape editing
+      colored in green</span>, <span class="prompt_title_blue">text-conditional abstraction-to-3D in blue</span> and
+      <span class="prompt_title_red">3D Stylization in red</span>.
+  </p>
+
+  <br/>
+  <br>
+
+
+  <table class="result-table" width="100%" align="center">
+		<tbody>
+                <tr>
+                    <th colspan="2" width="30%" class="prompt_title_green">Its top is not connected from its center to the leg</th>
+                    <th colspan="2" width="30%" class="prompt_title_blue">A wooden counter stool chair</th>
+                    <th colspan="2" width="30%" class="prompt_title_red">An old lantern</th>
+                </tr>
+                <!-- <tr> <td> <p>&nbsp;</p> </td> </tr> -->
+                <!-- loop onmouseover="this.play();" onmouseout="this.pause();" -->
+				<tr>
+                    <td colspan="2">
+                        <div class="video-container1">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%" class="result-video1">
+                                <source src="results/results/semantic/top.mp4" type="video/mp4">
+                            </video>
+                    </td>
+                    <td colspan="2">
+                        <div class="video-container">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                                <source src="results/results/abstract/stool.mp4" type="video/mp4">
+                            </video>
+                    </td>
+                    <td colspan="2">
+                        <div class="video-container">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                                <source src="results/results/stylization/lantern.mp4" type="video/mp4">
+                            </video>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                </tr>
+
+                <tr> <td> <br /> <br /> </td> </tr>
+                <!------------------ END ROW ------------------>
+                <tr>
+                    <th colspan="2" width="30%" class="prompt_title_blue">A spitfire plane</th>
+                    <th colspan="2" width="30%" class="prompt_title_red">A blacksmith hammer</th>
+                    <th colspan="2" width="30%" class="prompt_title_green">It looks like a straw</th>
+                </tr>
+                <!-- <tr> <td> <p>&nbsp;</p> </td> </tr> -->
+                <!-- loop onmouseover="this.play();" onmouseout="this.pause();" -->
+                <tr>
+                    <td colspan="2">
+                        <div class="video-container1">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%" class="result-video1">
+                                <source src="results/results/abstract/spitfire.mp4" type="video/mp4">
+                            </video>
+                    </td>
+                    <td colspan="2">
+                        <div class="video-container">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                                <source src="results/results/stylization/hammer.mp4" type="video/mp4">
+                            </video>
+                    </td>
+                    <td colspan="2">
+                        <div class="video-container">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                                <source src="results/results/semantic/straw.mp4" type="video/mp4">
+                            </video>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                </tr>
+                <tr> <td> <br /> <br /> </td> </tr>
+                <!------------------ END ROW ------------------>
+                <tr>
+                    <th colspan="2" width="30%" class="prompt_title_blue">A billiard table</th>
+                    <th colspan="2" width="30%" class="prompt_title_green">It has two top rails along its back</th>
+                    <th colspan="2" width="30%" class="prompt_title_blue">A commercial airline plane</th>
+                </tr>
+                <!-- <tr> <td> <p>&nbsp;</p> </td> </tr> -->
+                <!-- loop onmouseover="this.play();" onmouseout="this.pause();" -->
+                <tr>
+                    <td colspan="2">
+                        <div class="video-container1">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%" class="result-video1">
+                                <source src="results/results/abstract/billiard.mp4" type="video/mp4">
+                            </video>
+                    </td>
+                    <td colspan="2">
+                        <div class="video-container">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                                <source src="results/results/semantic/rails.mp4" type="video/mp4">
+                            </video>
+                    </td>
+					<td colspan="2">
+                        <div class="video-container">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                                <source src="results/results/abstract/commercial.mp4" type="video/mp4">
+                            </video>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                </tr>
+                <tr> <td> <br /> <br /> </td> </tr>
+                <!------------------ END ROW ------------------>
+                <tr>
+                    <th colspan="2" width="30%" class="prompt_title_red">A wizard hat</th>
+                    <th colspan="2" width="30%" class="prompt_title_green">Its legs are taller</th>
+                    <th colspan="2" width="30%" class="prompt_title_blue">A patio chair</th>
+                </tr>
+                <!-- <tr> <td> <p>&nbsp;</p> </td> </tr> -->
+                <!-- loop onmouseover="this.play();" onmouseout="this.pause();" -->
+                <tr>
+                    <td colspan="2">
+                        <div class="video-container1">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%" class="result-video1">
+                                <source src="results/results/stylization/wizard.mp4" type="video/mp4">
+                            </video>
+                    </td>
+                    <td colspan="2">
+                        <div class="video-container">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                                <source src="results/results/semantic/taller.mp4" type="video/mp4">
+                            </video>
+                    </td>
+                    <td colspan="2">
+                        <div class="video-container">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                                <source src="results/results/abstract/patio.mp4" type="video/mp4">
+                            </video>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                </tr>
+                <tr> <td> <br /> <br /> </td> </tr>
+                <!------------------ END ROW ------------------>
+                <tr>
+                    <th colspan="2" width="30%" class="prompt_title_green">The shade is circular and more flat</th>
+                    <th colspan="2" width="30%" class="prompt_title_green">It has a thinner seat</th>
+                    <th colspan="2" width="30%" class="prompt_title_blue">A gong table</th>
+                </tr>
+                <!-- <tr> <td> <p>&nbsp;</p> </td> </tr> -->
+                <!-- loop onmouseover="this.play();" onmouseout="this.pause();" -->
+                <tr>
+                    <td colspan="2">
+                        <div class="video-container1">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%" class="result-video1">
+                                <source src="results/results/semantic/shade.mp4" type="video/mp4">
+                            </video>
+                    </td>
+                    <td colspan="2">
+                        <div class="video-container">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                                <source src="results/results/semantic/thinner.mp4" type="video/mp4">
+                            </video>
+                    </td>
+					<td colspan="2">
+                        <div class="video-container">
+                            <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                                <source src="results/results/abstract/gong.mp4" type="video/mp4">
+                            </video>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                    <td width="14%">
+                        <div align="center" class="video-label">Guidance</div>
+                    </td>
+                    <td width="16%">
+                        <div align="center" class="video-label">Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </td>
+                </tr>
+                <tr> <td> <br /> <br /> </td> </tr>
+                <!------------------ END ROW ------------------>
+		</tbody>
+	</table>
+    <!------------------ END SECTION ------------------>
+
+
+  <p><br>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+</div>
+
+</body></html>

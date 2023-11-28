@@ -1,0 +1,96 @@
+h1 {
+    font-family: "Noto Sans", Arial;
+    font-size: 52px;
+    color: rgb(72, 72, 72);
+    letter-spacing: -1px;
+    word-spacing: 8px;
+}
+
+h2 {
+    font-family: "Noto Sans", Arial;
+    font-size: 35px;
+}
+
+h3 {
+    font-family: "Noto Sans", Arial;
+    font-size: 18px;
+    color: green;
+    transform: rotate(0deg);
+    position: relative;
+    left: 100;
+}
+
+h4 {
+    font-family: "Indie Flower", Arial;
+    font-size: 18px;
+    color: blue;
+    transform: rotate(0deg);
+    position: relative;
+    left: 100;
+}
+
+h6 {
+    font-family: "Indie Flower", Arial;
+    font-size: 18px;
+    color: red;
+    transform: rotate(0deg);
+    position: relative;
+    left: 100;
+}
+
+h7 {
+    font-family: "Indie Flower", Arial;
+    font-weight: bold;
+    font-size: 18px;
+    color: green;
+    transform: rotate(0deg);
+    position: relative;
+    left: 100;
+}
+
+h5 {
+    font-family: "Noto Sans", Arial;
+    font-size: 20px;
+}
+
+p {
+    font-family: "Noto Sans", Arial;
+    font-size: 16px;
+}
+
+li {
+    font-family: "Noto Sans", Arial;
+    font-size: 16px;
+}
+
+.prompt_title {
+    font-family: "Indie Flower", Arial;
+    font-size: 20px;
+}
+
+.prompt_title_green {
+    font-family: "Indie Flower", Arial;
+    font-size: 20px;
+	color: green;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.prompt_title_blue {
+    font-family: "Indie Flower", Arial;
+    font-size: 20px;
+	color: blue;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.prompt_title_red {
+    font-family: "Indie Flower", Arial;
+    font-size: 20px;
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.video-label {
+    font-family: "Noto Sans", Arial;
+    font-size: 20px;
+}
