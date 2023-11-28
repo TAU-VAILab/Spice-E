@@ -204,7 +204,10 @@ li {
 .intro-paragraph {
     width: 100%;
 }
-
+.intro-paragraph_bold {
+    width: 100%;
+    font-weight: bold;
+}
 .intro-paragraph p {
     width: 100%;
     font-size: 20px;
