@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Spic&middot;E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention</title>
+<!--    <link rel="icon" href="../pics/wis_logo.jpg">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+<script type="text/javascript">
+    src=hover.js;
+</script>
+<body>
+	<button style="position: fixed;right: 15px;top:  50%;height: 100px;width: 140px; font-size: 20px;" type="button"><a href="#top">Back to top</a></button>
+<div class="page-container" >
+  <h1 align="center">Spic&middot;E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention</h1>
+  <h2 align="center">Supplementary Material</h2>
+
+  <p align="center">&nbsp;</p>
+	<h5 align="left">
+    Click below to view our interactive results, comparisons and ablations:
+  </h5>
+	<a href="#top"></a>
+  <ul>
+	<li><a href="../index.html">Our Results</a></li>
+	<li><a href="comparisons_shape.html">Comparisons - Semantic Shape Editing</a></li>
+    <li><a href="comparisons_abstract.html">Comparisons - Text-Conditional Abstraction-to-3D</a></li>
+    <li><a href="comparisons_style.html">Comparisons - 3D Stylization</a></li>
+	<li><a href="ablations.html">Ablations</a></li>
+  </ul>
+
+
+<!------------------ BEGIN SECTION ------------------>
+
+<p>&nbsp;</p>
+  <hr>
+
+  <h2 id="ablations_container" align="left"><a name="image-results" id="image-results"></a>Ablations</h2>
+  <p align="left"> We compare our cross-entity attention mechanism with several baseline methods, detailed in Section 5.2. <br>
+      As illustrated below, these baseline methods struggle at generating shapes that both conform to the target text
+      prompt and preserve the structure of the guidance shape.
+    </p>
+    <br />
+
+  <table class="result-table" width="75%" align="center">
+    <tbody>
+            <tr>
+                <th width="2%" >&nbsp;</th>
+                <th width="15%" class="video-label">Guidance</th>
+                <th width="15%" class="video-label">Shap&middot;E<sub>FT</sub></th>
+                <th width="15%" class="video-label">SDEdit3D</th>
+                <th width="15%" class="video-label">ControlNet3D</th>
+                <th width="15%" class="video-label">Ours</th>
+            </tr>
+            <!-- <tr> <td> <p>&nbsp;</p> </td> </tr> -->
+            <!-- loop onmouseover="this.play();" onmouseout="this.pause();" -->
+             <tr>
+                <td align="center">
+                    <h4>A recliner</h4>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/basement_recliner/cond.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/basement_recliner/finetune.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/basement_recliner/sdedit.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/basement_recliner/control.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/basement_recliner/ours.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+             <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h4>A glass tea table</h4>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/glass_tea_table/cond.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/glass_tea_table/finetune.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/glass_tea_table/sdedit.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/glass_tea_table/control.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/glass_tea_table/ours.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h4>A F-28 Sparrow interceptor aircraft</h4>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/F-28_Sparrow_Interceptor_Aircraft/cond.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/F-28_Sparrow_Interceptor_Aircraft/finetune.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/F-28_Sparrow_Interceptor_Aircraft/sdedit.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/F-28_Sparrow_Interceptor_Aircraft/control.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/F-28_Sparrow_Interceptor_Aircraft/ours.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h4>A chess armchair</h4>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/Chess_Armchair/cond.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/Chess_Armchair/finetune.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/Chess_Armchair/sdedit.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/Chess_Armchair/control.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/Chess_Armchair/ours.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+           <tr>
+                <td align="center">
+                    <h4>A round top table</h4>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/round_top_table/cond.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/round_top_table/finetune.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/round_top_table/sdedit.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/round_top_table/control.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/round_top_table/ours.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h4>A military transport aircraft</h4>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/military_transport_aircraft/cond.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/military_transport_aircraft/finetune.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/military_transport_aircraft/sdedit.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/military_transport_aircraft/control.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/ablations/military_transport_aircraft/ours.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+
+    </tbody>
+  <p><br>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+</div>
+
+</body></html>

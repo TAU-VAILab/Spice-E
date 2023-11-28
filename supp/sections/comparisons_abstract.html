@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Spic&middot;E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention</title>
+<!--    <link rel="icon" href="../pics/wis_logo.jpg">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+<script type="text/javascript">
+    src=hover.js;
+</script>
+<body>
+	<button style="position: fixed;right: 15px;top:  50%;height: 100px;width: 140px; font-size: 20px;" type="button"><a href="#top">Back to top</a></button>
+<div class="page-container" >
+  <h1 align="center">Spic&middot;E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention</h1>
+  <h2 align="center">Supplementary Material</h2>
+
+  <p align="center">&nbsp;</p>
+	<h5 align="left">
+    Click below to view our interactive results, comparisons and ablations:
+  </h5>
+	<a href="#top"></a>
+  <ul>
+	<li><a href="../index.html">Our Results</a></li>
+	<li><a href="comparisons_shape.html">Comparisons - Semantic Shape Editing</a></li>
+    <li><a href="comparisons_abstract.html">Comparisons - Text-Conditional Abstraction-to-3D</a></li>
+    <li><a href="comparisons_style.html">Comparisons - 3D Stylization</a></li>
+	<li><a href="ablations.html">Ablations</a></li>
+  </ul>
+	
+ 
+<!------------------ BEGIN SECTION ------------------>
+	
+<p>&nbsp;</p>
+  <hr>
+	
+  <h2 id="comparison_container" align="left"><a name="image-results" id="image-results"></a>Comparison - Text-Conditional Abstraction-to-3D</h2>
+  <p align="left">Below we compare our results against SketchShape and Fantasia3D over the text-conditional abstraction-to-3D task.
+      A proxy cuboid-based abstract shape is provided as input (leftmost column) along with a target text prompt.
+      Our method allows for better preserving the input structure, while still conforming to the target text prompt.
+      </p>
+  <br />
+
+  <table class="result-table" width="75%" align="center">
+    <tbody>
+            <tr>
+                <th width="2%" >&nbsp;</th>
+                <th width="19%" class="video-label">Guidance</th>
+                <th width="19%" class="video-label">SketchShape</th>
+                <th width="19%" class="video-label">Fantasia3D</th>
+                <th width="19%" class="video-label">Ours</th>
+            </tr>
+            <!-- <tr> <td> <p>&nbsp;</p> </td> </tr> -->
+            <!-- loop onmouseover="this.play();" onmouseout="this.pause();" -->
+            <tr>
+                <td align="center">
+                    <h4>A moon bold armchair</h4>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Armchair_Moon_Bold_664MDA_Capdell/cond.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Armchair_Moon_Bold_664MDA_Capdell/sketchshape.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Armchair_Moon_Bold_664MDA_Capdell/fantasia.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Armchair_Moon_Bold_664MDA_Capdell/ours.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h4>A heavy fighter spaceship</h4>
+                </td> 
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Heavy_fighter_spaceship/cond.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td> 
+                <td> 
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Heavy_fighter_spaceship/sketchshape.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Heavy_fighter_spaceship/fantasia.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td> 
+                <td> 
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Heavy_fighter_spaceship/ours.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td>
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h4>A square glass top table</h4>
+                </td> 
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Mesa_Quadrada__Tampo_de_Vidro/cond.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td> 
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Mesa_Quadrada__Tampo_de_Vidro/sketchshape.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Mesa_Quadrada__Tampo_de_Vidro/fantasia.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td> 
+                <td> 
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Mesa_Quadrada__Tampo_de_Vidro/ours.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td>
+            </tr>
+                <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h4>A chauffeuse chair</h4>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Chauffeuse/cond.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Chauffeuse/sketchshape.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Chauffeuse/fantasia.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>`
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Chauffeuse/ours.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h4>A raylight fighter spaceship</h4>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Raylight_FighterSpaceship/cond.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Raylight_FighterSpaceship/sketchshape.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Raylight_FighterSpaceship/fantasia.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Raylight_FighterSpaceship/ours.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h4>A bjursta round table</h4>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Bjursta_Round_Table/cond.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Bjursta_Round_Table/sketchshape.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Bjursta_Round_Table/fantasia.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/abstract/Bjursta_Round_Table/ours.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+
+    </tbody>
+  <p><br>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+</div>
+
+</body></html>

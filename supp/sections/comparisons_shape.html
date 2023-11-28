@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Spic&middot;E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention</title>
+<!--    <link rel="icon" href="../pics/wis_logo.jpg">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+<script type="text/javascript">
+    src=hover.js;
+</script>
+<body>
+	<button style="position: fixed;right: 15px;top:  50%;height: 100px;width: 140px; font-size: 20px;" type="button"><a href="#top">Back to top</a></button>
+<div class="page-container" >
+  <h1 align="center">Spic&middot;E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention</h1>
+  <h2 align="center">Supplementary Material</h2>
+
+  <p align="center">&nbsp;</p>
+	<h5 align="left">
+    Click below to view our interactive results, comparisons and ablations:
+  </h5>
+	<a href="#top"></a>
+  <ul>
+	<li><a href="../index.html">Our Results</a></li>
+	<li><a href="comparisons_shape.html">Comparisons - Semantic Shape Editing</a></li>
+    <li><a href="comparisons_abstract.html">Comparisons - Text-Conditional Abstraction-to-3D</a></li>
+    <li><a href="comparisons_style.html">Comparisons - 3D Stylization</a></li>
+	<li><a href="ablations.html">Ablations</a></li>
+  </ul>
+	
+ 
+<!------------------ BEGIN SECTION ------------------>
+	
+<p>&nbsp;</p>
+  <hr>
+	
+  <h2 id="comparison_container" align="left"><a name="image-results" id="image-results"></a>Comparisons - Semantic Shape Editing</h2>
+  <p align="left">Below we compare our results against ChangeIt3D over the semantic shape editing task.
+      We show guidance-output shape pairs (guidance shapes are depicted on the left), all represented as point clouds,
+      as ChangeIt3D operates over point clouds. Note that our guidance shapes are extracted from Shape-E's encoding,
+      allowing for better emphasizing the effect of the edits (vs. showing the input shapes directly).
+      </p>
+  <br />
+
+  <table class="result-table" width="75%" align="center">
+    <tbody>
+            <tr>
+                <th width="2%" >&nbsp;</th>
+                <th width="38%" class="video-label">ChangeIt3D</th>
+                <th width="38%" class="video-label">Ours</th>
+            </tr>
+            <!-- <tr> <td> <p>&nbsp;</p> </td> </tr> -->
+            <!-- loop onmouseover="this.play();" onmouseout="this.pause();" -->
+            <tr>
+                <td align="center">
+                    <h7>The top is square</h7>
+                </td> 
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/shape/table_2/changeit.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td> 
+                <td>`
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/shape/table_2/spice.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td> 
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h7><br>It has no strecher* between the feet</h7>
+                </td> 
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/shape/table_1/changeit.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td> 
+                <td>`
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/shape/table_1/spice.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td> 
+            </tr>
+            <tr>
+                <td colspan="3">*A stretcher is a horizontal support element (typically located on a table, chair or other item of furniture).</td>
+            </tr>
+            <tr>
+                <td colspan="3">Observe how our method allows for removing the stretchers from the bottom of the feet while preserving their structure, while ChangeIt3D instead connects the feet together.</td>
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <th width="2%" >&nbsp;</th>
+                <th width="38%" class="video-label">ChangeIt3D</th>
+                <th width="38%" class="video-label">Ours</th>
+            </tr>
+            <tr>
+                <td align="center">
+                    <h7>The backrest is solid and does not have an opening</h7>
+                </td> 
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/shape/chair_1/changeit.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td> 
+                <td> 
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/shape/chair_1/spice.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td>
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h7>It has a thiner seat</h7>
+                </td> 
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/shape/chair_2/changeit.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td> 
+                <td> 
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/shape/chair_2/spice.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </td>
+            </tr>
+                <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <th width="2%" >&nbsp;</th>
+                <th width="38%" class="video-label">ChangeIt3D</th>
+                <th width="38%" class="video-label">Ours</th>
+            </tr>
+            <tr>
+                <td align="center">
+                    <h7>The target is shorter</h7>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/shape/lamp_1/changeit.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/shape/lamp_1/spice.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h7>It's pole is thicker</h7>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/shape/lamp_2/changeit.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/shape/lamp_2/spice.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+    </tbody>
+  <p><br>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+</div>
+
+</body></html>

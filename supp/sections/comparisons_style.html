@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Spic&middot;E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention</title>
+<!--    <link rel="icon" href="../pics/wis_logo.jpg">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+<script type="text/javascript">
+    src=hover.js;
+</script>
+<body>
+	<button style="position: fixed;right: 15px;top:  50%;height: 100px;width: 140px; font-size: 20px;" type="button"><a href="#top">Back to top</a></button>
+<div class="page-container" >
+  <h1 align="center">Spic&middot;E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention</h1>
+  <h2 align="center">Supplementary Material</h2>
+
+  <p align="center">&nbsp;</p>
+	<h5 align="left">
+    Click below to view our interactive results, comparisons and ablations:
+  </h5>
+	<a href="#top"></a>
+  <ul>
+	<li><a href="../index.html">Our Results</a></li>
+	<li><a href="comparisons_shape.html">Comparisons - Semantic Shape Editing</a></li>
+    <li><a href="comparisons_abstract.html">Comparisons - Text-Conditional Abstraction-to-3D</a></li>
+    <li><a href="comparisons_style.html">Comparisons - 3D Stylization</a></li>
+	<li><a href="ablations.html">Ablations</a></li>
+  </ul>
+
+
+<!------------------ BEGIN SECTION ------------------>
+
+<p>&nbsp;</p>
+  <hr>
+
+  <h2 id="comparison_container" align="left"><a name="image-results" id="image-results"></a>Comparison - 3D Stylization</h2>
+  <p align="left">Below we compare our results against Latent-Paint and Fantasia3D over the 3D stylization task.
+                The methods emphasized with a (*) below do not modify the object's geometry, only its texture.
+                For all methods, an uncolored object is provided as input (leftmost column) along with a target text prompt.
+      Both Latent-Paint and Fantasia3D are optimization-based techniques, with lengthy inference times (over 15 minutes),
+      while our method can generate shapes that conform to the target text prompt while preserving the structure of the
+      guidance shape within several seconds.
+      </p>
+  <br />
+
+  <table class="result-table" width="75%" align="center">
+    <tbody>
+            <tr>
+                <th width="2%" >&nbsp;</th>
+                <th width="15%" class="video-label">Guidance</th>
+                <th width="18%" class="video-label">Latent-Paint*</th>
+                <th width="15%" class="video-label">Fantasia3D-Paint*</th>
+                <th width="15%" class="video-label">Fantasia3D</th>
+                <th width="15%" class="video-label">Ours</th>
+            </tr>
+            <!-- <tr> <td> <p>&nbsp;</p> </td> </tr> -->
+            <!-- loop onmouseover="this.play();" onmouseout="this.pause();" -->
+              <tr>
+                <td align="center">
+                    <h6>A plush toy dumbell</h6>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/cond_dumbell.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/latent_paint_dumbell.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/fantasia_paint_dumbell.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/fantasia_dumbell.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/ours_dumbell.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+                        <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h6>A clay vase</h6>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/cond_vase.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/latent_paint_vase.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/fantasia_paint_vase.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/fantasia_vase.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/ours_vase.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h6>A bottle of orange soda</h6>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/cond_soda.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/latent_paint_soda.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/fantasia_paint_soda.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/fantasia_soda.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/ours_soda.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h6>A rainbow colored fish</h6>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/cond_fish.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/latent_paint_fish.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/fantasia_paint_fish.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/fantasia_fish.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/ours_fish.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+            <tr> <td> <br /> <br /> </td> </tr>
+            <tr>
+                <td align="center">
+                    <h6>A fighter pilot helmet</h6>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/cond_helmet.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/latent_paint_helmet.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/fantasia_paint_helmet.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/fantasia_helmet.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+                <td>
+                    <div class="video-container">
+                        <video onmouseover="this.play();" onmouseout="this.removeAttribute('controls');this.load()" muted width="95%"  class="result-video">
+                            <source src="../results/comparisons/stylization/ours_helmet.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            </tr>
+    </tbody>
+  <p><br>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+</div>
+
+</body></html>
