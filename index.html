@@ -247,14 +247,16 @@
         <div class="intro-container has-text-justified">
             <div class="intro-paragraph">
                 <p>
-                    Our method adds structural guidance to 3D diffusion models. This allows for generating
+                    <br>
+                    <span class="intro-paragraph_bold">TL;DR Our method adds structural guidance to 3D diffusion models.</span><br><br>
+                    This allows for generating
                     text-conditional 3D shapes that enforce task-specific structural priors from auxiliary
                     guidance shapes (denoted by <span class="video-label-text">Guidance</span> above). Our approach supports
-                    different 3D editing tasks,such as: semantic shape editing
-                    (<span class="prompt_title_green">colored in green above</span>),
+                    different 3D editing tasks, such as: semantic shape editing
+                    (<span class="prompt_title_green">text colored in green above</span>),
                     text-conditional Abstraction-to-3D, which transforms a primitive-based abstraction into a highly
-                    expressive shape (<span class="prompt_title_blue">colored in blue above</span>) and 3D stylization
-                    (<span class="prompt_title_red">colored in red above</span>).
+                    expressive shape (<span class="prompt_title_blue">text colored in blue above</span>) and 3D stylization
+                    (<span class="prompt_title_red">text colored in red above</span>), all enabled within seconds.
                 </p>
             </div>
         </div>
@@ -299,12 +301,17 @@
             </div>            
             <p class="has-text-justified">
                 <br>
-                We finetune a transformer-based diffusion model, exemplified by Shap&middot;E, pretrained on a large
-                dataset of text-conditional 3D assets, to enable structural control over the generated 3D shapes.
+                We finetune a transformer-based diffusion model, as exemplified by <a href="https://github.com/openai/shap-e">Shap&middot;E</a>
+                which is pretrained on a large dataset of text-conditional 3D assets, to enable structural control over the generated 3D shapes.
                 The diffusion model (in gray) is modified to use latent vectors from multiple entities -- a conditional guidance shape
                 \(\mathbf{X}_c\) and an input 3D shape \(\mathbf{X}_{in}\), and self-attention layers are replaced with
-                our proposed cross-entity attention mechanism. After finetuning, the output latent representation can
-                be decoded into a 3D shape \(\mathbf{X}_{out}\), represented as either a neural radiance field or a signed texture field.
+                our proposed cross-entity attention mechanism (in red). This mechanism mixes their latent representations by
+                carefully combining their Queries functions, allowing for learning task-specific structural priors while
+                preserving the model's generative capabilities. During inference, SPiC-E receives a guidance shape in
+                addition to a target text prompt, enabling the generation of 3D shapes (represented as either a neural
+                radiance field or a signed texture field) conditioned on both high-level text directives and low-level
+                structural constraints. See our paper for more details on our cross-entity attention mechanism and how we
+                apply it for incorporating structural priors in pretrained 3D diffusion models.
             </p>
         <div class="attn-grid-vid-container">
             
@@ -312,26 +319,22 @@
         </div>
     </section>
 
-    <!-- BibTex -->
-<!--    <section class="bib-section" width="100%">-->
-<!--        <div class="bib-container">-->
-<!--            <hr>-->
-<!--            <h2 align="center">BibTeX</h2>-->
-<!--            <div class="code-container">-->
-<!--                <code>-->
-<!--				TODO! </br>-->
-<!--                  @misc{sella2023voxe, <br>-->
-<!--                    &emsp;  title={Vox-E: Text-guided Voxel Editing of 3D Objects}, <br>-->
-<!--                    &emsp;  author={Etai Sella and Gal Fiebelman and Peter Hedman and Hadar Averbuch-Elor}, <br>-->
-<!--                    &emsp;  year={2023}, <br>-->
-<!--                    &emsp;  eprint={2303.12048}, <br>-->
-<!--                    &emsp;  archivePrefix={arXiv}, <br>-->
-<!--                    &emsp;  primaryClass={cs.CV} <br>-->
-<!--                  }-->
-<!--                </code>-->
-<!--            </div> -->
-<!--        </div>-->
-<!--    </section>-->
+<!--     BibTex-->
+    <section class="bib-section" width="100%">
+        <div class="bib-container">
+            <hr>
+            <h2 align="center">BibTeX</h2>
+            <div class="code-container">
+                <code>
+                  @misc{<br>
+                    &emsp; title={SPiC-E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention}, <br>
+                &emsp;   &emsp; author={Etai Sella and Gal Fiebelman and Noam Atia and Hadar Averbuch-Elor}, <br>
+                &emsp;   &emsp; year={2023}, <br>
+                  }
+                </code>
+            </div>
+        </div>
+    </section>
 
     <!-- Acknowledgements -->
     <!-- <section class="ack-section" width="100%"> -->
