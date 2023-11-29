@@ -255,7 +255,7 @@
                     different 3D editing tasks, such as: semantic shape editing
                     (performing semantic modifications over the input guidance shape; <span class="prompt_title_green">text colored in green above</span>),
                     text-conditional Abstraction-to-3D (transforming primitive-based abstractions into highly expressive shapes; <span class="prompt_title_blue">text colored in blue above</span>) and 3D stylization
-                    (stylizing the uncolored guidance shape according to the target text prompt; <span class="prompt_title_red">text colored in red above</span>), all enabled within seconds.
+                    (stylizing uncolored guidance shapes according to target text prompts; <span class="prompt_title_red">text colored in red above</span>), all enabled within seconds.
                 </p>
             </div>
         </div>
@@ -280,7 +280,7 @@
                 semantic shape editing and text-conditional abstraction-to-3D, which transforms primitive-based abstractions
                 into highly-expressive shapes. Extensive experiments demonstrate that SPiC&middot;E achieves SOTA performance over
                 these tasks while often being considerably faster than alternative methods. Importantly, this is accomplished
-                without tailoring our approach for any specific task. We will release our code and trained models.
+                without tailoring our approach for any specific task.
             </p>
 <!--            <div class="swipe_vid_container" align="center" width="100%">-->
 <!--                <video loop autoplay muted width="60%"  class="swipe_video">-->
@@ -305,7 +305,7 @@
                         <button class="prompt_title_black" onclick="playVideo('video4', '')">abstract table 4</button>
                     </td>
                     <td align="center">
-                        <video id="videoPlayer" loop autoplay  muted width="60%"  class="result-video">
+                        <video id="videoPlayer" loop autoplay  muted width="70%"  class="result-video">
                             <source src="./webpage_assets/videos/interactive/video1.mp4" type="video/mp4">
                         </video>
                     </td>
@@ -318,6 +318,8 @@
                     </td>
                 </tr>
             </table>
+            <span>Choose a guidance primitive-based abstraction (on the left) and then select one of the text prompts (on the right) to view the tables generated with our</span><br>
+            <span>method. As illustrated in this interactive visualization, SPiC-E allows for enforcing structural priors while conveying the target text prompt.</span>
         </div>
     </section>
 
