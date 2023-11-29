@@ -49,7 +49,7 @@ li {
 
 .prompt_title_local {
     font-family: "Indie Flower", Arial;
-    font-size: 22px;
+    font-size: 32px;
 	color: green;
 	font-weight: bold;
 	text-decoration: underline;
@@ -57,7 +57,7 @@ li {
 
 .prompt_title_red {
     font-family: "Indie Flower", Arial;
-    font-size: 22px;
+    font-size: 30px;
 	color: red;
 	font-weight: bold;
 	text-decoration: underline;
@@ -73,7 +73,7 @@ li {
 
 .prompt_title_blue {
     font-family: "Indie Flower", Arial;
-    font-size: 22px;
+    font-size: 30px;
 	color: blue;
 	font-weight: bold;
 	text-decoration: underline;
@@ -97,6 +97,30 @@ li {
 
 .prompt_title_green {
     font-family: "Indie Flower", Arial;
+    font-size: 30px;
+	color: green;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.prompt_title_red_small {
+    font-family: "Indie Flower", Arial;
+    font-size: 22px;
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.prompt_title_blue_small {
+    font-family: "Indie Flower", Arial;
+    font-size: 22px;
+	color: blue;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.prompt_title_green_small {
+    font-family: "Indie Flower", Arial;
     font-size: 22px;
 	color: green;
 	font-weight: bold;
@@ -112,6 +136,14 @@ li {
 }
 
 .prompt_title_black {
+    font-family: "Indie Flower", Arial;
+    font-size: 22px;
+	color: black;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.prompt_title_black_small {
     font-family: "Indie Flower", Arial;
     font-size: 22px;
 	color: black;
@@ -222,12 +254,14 @@ li {
     border: 2px solid rgb(0, 0, 0);
 }
 
+
 .page-container {
-	width: 100%;
+	width: 90%;
+    margin:0 auto;
 }
 
 .swiper {
-    width: 500px;
+    width: 600px;
     margin-top: 30px;
 }
 
@@ -347,11 +381,11 @@ button {
 		font-size: 50%;
 	}
 	
-	.prompt_title_blue_inter {
+	.prompt_title_blue_small {
 		font-size: 50%;
 	}
 
-	.prompt_title_black_inter {
+	.prompt_title_black_small {
 		font-size: 50%;
 	}
 	
@@ -401,6 +435,18 @@ button {
 	
 	.prompt_title_green_inpar {
 		font-size: 90%;
+	}
+	
+	.prompt_title_red {
+		font-size: 110%;
+	}
+	
+	.prompt_title_blue {
+		font-size: 110%;
+	}
+	
+	.prompt_title_green {
+		font-size: 110%;
 	}
 
 }

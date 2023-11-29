@@ -212,12 +212,12 @@
             <table class="slide-table" width="100%" align="center">
                 <tbody>
                     <tr>
-                        <th colspan="2" width="90%" class="prompt_title_green" align="center">It looks like a straw</th>
+                        <th colspan="2" width="90%" class="prompt_title_green" align="center">The backrest is solid and does not have an opening</th>
                     </tr>
                     <tr>
                         <td colspan="2">
                             <video loop autoplay  muted width="95%"  class="result-video">
-                                <source src="webpage_assets/videos/straw.mp4" type="video/mp4">
+                                <source src="webpage_assets/videos/back.mp4" type="video/mp4">
                             </video>
                         </td>
                     </tr>
@@ -297,28 +297,29 @@
             <h2 align="center">Examples of Text-conditional Abstraction-to-3D Results</h2>
             <table class="interactive-table" width="100%" align="center">
                 <tr>
-                    <td align="center" width="20%">
+                    <td align="center" width="25%">
                         <br></br>
-                        <button class="prompt_title_black_inter" onclick="playVideo('video3', '')">Abstraction #1</button><br></br><br></br>
-                        <button class="prompt_title_black_inter" onclick="playVideo('video2', '')">Abstraction #2</button><br></br><br></br>
-                        <button class="prompt_title_black_inter" onclick="playVideo('video1', '')">Abstraction #3</button><br></br><br></br>
-                        <button class="prompt_title_black_inter" onclick="playVideo('video4', '')">Abstraction #4</button><br></br>
+                        <button class="prompt_title_black_small" onclick="playVideo('video3', '')">Abstraction #1</button><br></br><br></br>
+                        <button class="prompt_title_black_small" onclick="playVideo('video2', '')">Abstraction #2</button><br></br><br></br>
+                        <button class="prompt_title_black_small" onclick="playVideo('video1', '')">Abstraction #3</button><br></br><br></br>
+                        <button class="prompt_title_black_small" onclick="playVideo('video4', '')">Abstraction #4</button><br></br>
                     </td>
                     <td align="center">
-                        <video id="videoPlayer" loop autoplay  muted width="70%"  class="result-video">
+                        <video id="videoPlayer" loop autoplay  muted width="100%"  class="result-video">
                             <source src="./webpage_assets/videos/interactive/video3.mp4" type="video/mp4">
                         </video>
                     </td>
                     <td align="center" width="25%">
                         <br></br>
-                        <button class="prompt_title_blue_inter" onclick="switchVideo('_a')">A billiard table</button><br></br><br></br>
-                        <button class="prompt_title_blue_inter" onclick="switchVideo('_b')">A glass table</button><br></br><br></br>
-                        <button class="prompt_title_blue_inter" onclick="switchVideo('_c')">A ping pong table</button><br></br><br></br>
-                        <button class="prompt_title_blue_inter" onclick="switchVideo('_d')">A round coffee table</button><br></br>
+                        <button class="prompt_title_blue_small" onclick="switchVideo('_a')">A billiard table</button><br></br><br></br>
+                        <button class="prompt_title_blue_small" onclick="switchVideo('_b')">A glass table</button><br></br><br></br>
+                        <button class="prompt_title_blue_small" onclick="switchVideo('_c')">A ping pong table</button><br></br><br></br>
+                        <button class="prompt_title_blue_small" onclick="switchVideo('_d')">A round coffee table</button><br></br>
                     </td>
                 </tr>
             </table>
-            <span class="interactive_bold">Choose a guidance primitive-based abstraction (on the left) and then select one of the text prompts (on the right) to view the tables generated with our method.</span><br>
+            <span class="interactive_bold">Select a guidance primitive-based abstraction (on the left) and then select one of the text prompts (on the right) to view the tables generated with our method.</span>
+			<br>
             <span class="interactive_bold">As illustrated in this interactive visualization, SPiC-E allows for enforcing structural priors while conveying the target text prompt.</span>
         </div>
     </section>
@@ -340,7 +341,7 @@
                 our proposed cross-entity attention mechanism (in red). This mechanism mixes their latent representations by
                 carefully combining their Queries functions, allowing for learning task-specific structural priors while
                 preserving the model's generative capabilities.<br></br>
-                🔍 During inference, SPiC-E receives a guidance shape in addition to a target text prompt, enabling the generation of 3D shapes 
+                🔍 During inference, SPiC&middot;E receives a guidance shape in addition to a target text prompt, enabling the generation of 3D shapes 
                 (represented as either a neural radiance field or a signed texture field) conditioned on both high-level text directives and low-level
                 structural constraints.<br></br>
                 📋 See our paper for more details on our cross-entity attention mechanism and how we apply it for incorporating structural priors 
