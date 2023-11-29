@@ -1,5 +1,6 @@
 body {
     font-family: 'Noto Sans', sans-serif;
+	width: 100%;
   }
 
 h1 {
@@ -24,22 +25,6 @@ h2 {
 
 h2_r {
 	color: rgb(240, 95, 95);
-}
-
-h3 {
-    font-family: "Noto Sans", Arial;
-    font-size: 20px;
-    transform: rotate(270deg);
-    position: relative;
-    left: 100;
-}
-
-h4 {
-    font-family: "Indie Flower", Arial;
-    font-size: 18px;
-    transform: rotate(270deg);
-    position: relative;
-    left: 100;
 }
 
 h5 {
@@ -78,7 +63,31 @@ li {
 	text-decoration: underline;
 }
 
+.prompt_title_red_inpar {
+    font-family: "Indie Flower", Arial;
+    font-size: 22px;
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 .prompt_title_blue {
+    font-family: "Indie Flower", Arial;
+    font-size: 22px;
+	color: blue;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.prompt_title_blue_inpar {
+    font-family: "Indie Flower", Arial;
+    font-size: 22px;
+	color: blue;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.prompt_title_blue_inter {
     font-family: "Indie Flower", Arial;
     font-size: 22px;
 	color: blue;
@@ -94,7 +103,23 @@ li {
 	text-decoration: underline;
 }
 
+.prompt_title_green_inpar {
+    font-family: "Indie Flower", Arial;
+    font-size: 22px;
+	color: green;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 .prompt_title_black {
+    font-family: "Indie Flower", Arial;
+    font-size: 22px;
+	color: black;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.prompt_title_black_inter {
     font-family: "Indie Flower", Arial;
     font-size: 22px;
 	color: black;
@@ -109,7 +134,7 @@ li {
 
 .video-label-slides {
     font-family: "Noto Sans", Arial;
-    font-size: 1.6vw;
+    font-size: 22px;
     margin-bottom: 20px;
 }
 .video-label-text {
@@ -117,6 +142,16 @@ li {
     font-size: 1.4vw;
     margin-bottom: 20px;
 }
+
+.video-label-text-inpar {
+    font-family: "Noto Sans", Arial;
+    font-size: 1.4vw;
+    margin-bottom: 20px;
+}
+
+.inpar {
+}
+
 .author-block {
     font-size: 20px;
 }
@@ -188,8 +223,7 @@ li {
 }
 
 .page-container {
-    width: 100%;
-    height: 100vh
+	width: 100%;
 }
 
 .swiper {
@@ -267,10 +301,8 @@ li {
 }
 
 .inline-img {
-  display: inline;
-  margin: 0 0.125em;
-  padding: 0;
-  vertical-align: baseline;
+  width: 52px;
+  height: 52px;
 }
 
 button {
@@ -281,4 +313,94 @@ button {
 
 .interactive_bold {
     font-size: 15px;
+}
+
+@media	(max-width: 600px){
+	.page-container {
+		width: 90%;
+		margin-left: auto; 
+		margin-right: auto;
+	}
+	
+	h1 {
+		font-size: 250%;
+	}
+	
+	.inline-img {
+		width: 10%;
+		height: 10%;
+	}
+	
+	h2 {
+		font-size: 150%;
+	}
+	
+	.swiper {
+		width: 80%;
+	}
+	
+	.author-block {
+		font-size: 100%;
+	}
+ 
+	.author-block a1 {
+		font-size: 50%;
+	}
+	
+	.prompt_title_blue_inter {
+		font-size: 50%;
+	}
+
+	.prompt_title_black_inter {
+		font-size: 50%;
+	}
+	
+	.intro-container {
+		width: 75%;
+	}
+	
+	.abstract-container {
+		width: 75%;
+	}
+	
+	.method-container {
+		width: 75%;
+	}
+	
+	.ack-container {
+		width: 75%;
+	}
+	
+	.bib-container {
+		width: 75%;
+	}
+
+	.intro-paragraph p {
+		font-size: 90%;
+	}
+	
+	p {
+		font-size: 90%;
+	}
+	
+	.abstract-container p {
+		font-size: 90%;
+	}
+	
+	.video-label-text-inpar {
+		font-size: 90%;
+	}
+	
+	.prompt_title_red_inpar {
+		font-size: 90%;
+	}
+	
+	.prompt_title_blue_inpar {
+		font-size: 90%;
+	}
+	
+	.prompt_title_green_inpar {
+		font-size: 90%;
+	}
+
 }
