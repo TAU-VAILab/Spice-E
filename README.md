@@ -1,2 +1,2 @@
-# Spic-E
+# SPiC-E
 Code coming soon.
