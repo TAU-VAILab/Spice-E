@@ -299,17 +299,17 @@
                 <tr>
                     <td align="center" width="20%">
                         <br></br>
-                        <button class="prompt_title_black" onclick="playVideo('video1', '')">abstract table 1</button><br></br><br></br>
+                        <button class="prompt_title_black" onclick="playVideo('video3', '')">abstract table 1</button><br></br><br></br>
                         <button class="prompt_title_black" onclick="playVideo('video2', '')">abstract table 2</button><br></br><br></br>
-                        <button class="prompt_title_black" onclick="playVideo('video3', '')">abstract table 3</button><br></br><br></br>
+                        <button class="prompt_title_black" onclick="playVideo('video1', '')">abstract table 3</button><br></br><br></br>
                         <button class="prompt_title_black" onclick="playVideo('video4', '')">abstract table 4</button>
                     </td>
                     <td align="center">
                         <video id="videoPlayer" loop autoplay  muted width="70%"  class="result-video">
-                            <source src="./webpage_assets/videos/interactive/video1.mp4" type="video/mp4">
+                            <source src="./webpage_assets/videos/interactive/video3.mp4" type="video/mp4">
                         </video>
                     </td>
-                    <td align="center" width="20%">
+                    <td align="center" width="25%">
                         <br></br>
                         <button class="prompt_title_blue" onclick="switchVideo('_a')">a billiard table</button><br></br><br></br>
                         <button class="prompt_title_blue" onclick="switchVideo('_b')">a glass table</button><br></br><br></br>
@@ -318,8 +318,8 @@
                     </td>
                 </tr>
             </table>
-            <span>Choose a guidance primitive-based abstraction (on the left) and then select one of the text prompts (on the right) to view the tables generated with our</span><br>
-            <span>method. As illustrated in this interactive visualization, SPiC-E allows for enforcing structural priors while conveying the target text prompt.</span>
+            <span class="interactive_bold">Choose a guidance primitive-based abstraction (on the left) and then select one of the text prompts (on the right) to view the tables generated with our method.</span><br>
+            <span class="interactive_bold">As illustrated in this interactive visualization, SPiC-E allows for enforcing structural priors while conveying the target text prompt.</span>
         </div>
     </section>
 
@@ -333,17 +333,18 @@
             </div>            
             <p class="has-text-justified">
                 <br>
-                We finetune a transformer-based diffusion model, as exemplified by <a href="https://github.com/openai/shap-e">Shap&middot;E</a>
-                which is pretrained on a large dataset of text-conditional 3D assets, to enable structural control over the generated 3D shapes.
-                The diffusion model (in gray) is modified to use latent vectors from multiple entities -- a conditional guidance shape
+                🌍 We finetune a transformer-based diffusion model, as exemplified by <a href="https://github.com/openai/shap-e">Shap&middot;E</a>
+                which is pretrained on a large dataset of text-conditional 3D assets, to enable structural control over the generated 3D shapes.<br></br>
+                💡 The diffusion model (in gray) is modified to use latent vectors from multiple entities - a conditional guidance shape
                 \(\mathbf{X}_c\) and an input 3D shape \(\mathbf{X}_{in}\), and self-attention layers are replaced with
                 our proposed cross-entity attention mechanism (in red). This mechanism mixes their latent representations by
                 carefully combining their Queries functions, allowing for learning task-specific structural priors while
-                preserving the model's generative capabilities. During inference, SPiC-E receives a guidance shape in
-                addition to a target text prompt, enabling the generation of 3D shapes (represented as either a neural
-                radiance field or a signed texture field) conditioned on both high-level text directives and low-level
-                structural constraints. See our paper for more details on our cross-entity attention mechanism and how we
-                apply it for incorporating structural priors in pretrained 3D diffusion models.
+                preserving the model's generative capabilities.<br></br>
+                🔍 During inference, SPiC-E receives a guidance shape in addition to a target text prompt, enabling the generation of 3D shapes 
+                (represented as either a neural radiance field or a signed texture field) conditioned on both high-level text directives and low-level
+                structural constraints.<br></br>
+                📋 See our paper for more details on our cross-entity attention mechanism and how we apply it for incorporating structural priors 
+                in pretrained 3D diffusion models.
             </p>
         <div class="attn-grid-vid-container">
             
@@ -409,7 +410,7 @@ const swiper = new Swiper('.swiper', {
 </script>
 
 <script>
-    let currentVideo = "video1";
+    let currentVideo = "video3";
     let currentSuffix = "";
 
     function playVideo(newVideo, newSuffix) {

@@ -278,3 +278,7 @@ button {
     background: none;
     cursor: pointer;
 }
+
+.interactive_bold {
+    font-size: 15px;
+}
