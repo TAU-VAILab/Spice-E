@@ -94,6 +94,14 @@ li {
 	text-decoration: underline;
 }
 
+.prompt_title_black {
+    font-family: "Indie Flower", Arial;
+    font-size: 22px;
+	color: black;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 .video-label {
     font-family: "Noto Sans", Arial;
     font-size: 1.8vw;
@@ -263,4 +271,10 @@ li {
   margin: 0 0.125em;
   padding: 0;
   vertical-align: baseline;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
 }
