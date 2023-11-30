@@ -297,45 +297,44 @@
             <h2 align="center">Examples of Text-conditional Abstraction-to-3D Results</h2><br></br>
             <table class="interactive-table" width="100%" align="center">
                 <tr>
-                    <td align="center" width="25%">
+                    <td align="center">
                         <button class="prompt_title_black_small" onclick="playVideo('video3', '')">Abstraction #1</button>
                     </td>
-                    <td align="center" rowspan="4" width="40%" style="height: 320px;">
-                        <video id="videoPlayer" loop autoplay muted width="100%" class="result-video">
+                    <td align="center">
+                        <button class="prompt_title_black_small" onclick="playVideo('video2', '')">Abstraction #2</button>
+                    </td>
+                    <td align="center">
+                        <button class="prompt_title_black_small" onclick="playVideo('video1', '')">Abstraction #3</button>
+                    </td>
+                    <td align="center">
+                        <button class="prompt_title_black_small" onclick="playVideo('video4', '')">Abstraction #4</button>
+                    </td>
+                </tr>
+                <tr class="fixed-height-row" id="videoRow">
+                    <td align="center" colspan="4">
+                        <video id="videoPlayer" loop autoplay muted width="50%" class="result-video">
                             <source src="./webpage_assets/videos/interactive/video3.mp4" type="video/mp4">
                         </video>
                     </td>
-                    <td align="center" width="30%">
+                </tr>
+                <tr>
+                    <td align="center">
                         <button class="prompt_title_blue_small" onclick="switchVideo('_a')">A billiard table</button>
                     </td>
-                </tr>
-                <tr>
-                    <td align="center" width="25%">
-                        <button class="prompt_title_black_small" onclick="playVideo('video2', '')">Abstraction #2</button>
-                    </td>
-                    <td align="center" width="30%">
+                    <td align="center">
                         <button class="prompt_title_blue_small" onclick="switchVideo('_b')">A glass table</button>
                     </td>
-                </tr>
-                <tr>
-                    <td align="center" width="25%">
-                        <button class="prompt_title_black_small" onclick="playVideo('video1', '')">Abstraction #3</button>
-                    </td>
-                    <td align="center" width="30%">
+                    <td align="center">
                         <button class="prompt_title_blue_small" onclick="switchVideo('_c')">A ping pong table</button>
                     </td>
-                </tr>
-                <tr>
-                    <td align="center" width="25%">
-                        <button class="prompt_title_black_small" onclick="playVideo('video4', '')">Abstraction #4</button>
-                    </td>
-                    <td align="center" width="30%">
+                    <td align="center">
                         <button class="prompt_title_blue_small" onclick="switchVideo('_d')">A round coffee table</button>
                     </td>
                 </tr>
-            </table>            
-            <span class="interactive_bold">Select a guidance primitive-based abstraction (on the left) and then select
-                one of the text prompts (on the right) to view structure and text conditional tables generated with our method.
+            </table>
+            <br></br>               
+            <span class="interactive_bold">Select a guidance primitive-based abstraction and then select
+                one of the text prompts to view structure and text conditional tables generated with our method.
                 As illustrated in this interactive visualization, SPiC-E allows for enforcing structural priors while conveying the target text prompt.</span>
         </div>
     </section>
@@ -435,15 +434,18 @@ const swiper = new Swiper('.swiper', {
     let currentSuffix = "";
 
     function playVideo(newVideo, newSuffix) {
-        if (currentVideo === newVideo & currentSuffix == newSuffix) return
+        if (currentVideo === newVideo && currentSuffix === newSuffix) return;
 
         const videoPlayer = document.getElementById('videoPlayer');
 
         currentTime = videoPlayer.currentTime;
-        videoPlayer.src = "./webpage_assets/videos/interactive/" + newVideo + newSuffix + ".mp4";
-        videoPlayer.addEventListener('loadedmetadata', function() {
+        videoPlayer.src = `./webpage_assets/videos/interactive/${newVideo}${newSuffix}.mp4`;
+        videoPlayer.addEventListener('loadedmetadata', function () {
             videoPlayer.currentTime = currentTime;
             videoPlayer.removeEventListener('loadedmetadata', arguments.callee);
+
+            // After changing the video source, set the fixed height
+            setFixedHeight();
         });
         videoPlayer.play();
         currentVideo = newVideo;
@@ -451,10 +453,15 @@ const swiper = new Swiper('.swiper', {
     }
 
     function switchVideo(newSuffix) {
-        if (currentSuffix === newSuffix) return
+        if (currentSuffix === newSuffix) return;
         playVideo(currentVideo, newSuffix);
     }
-	
+
+    // Function to set a fixed height for the row after changing the video source
+    function setFixedHeight() {
+        const videoRow = document.getElementById('videoRow');
+        videoRow.style.height = `${videoRow.offsetHeight}px`;
+    }
 </script>
 
 </body></html>
