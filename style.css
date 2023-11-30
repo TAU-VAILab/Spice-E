@@ -452,5 +452,8 @@ button {
 	.prompt_title_green {
 		font-size: 110%;
 	}
-
+	
+	.fixed-height-row {
+		min-height: 50%;
+	}
 }
