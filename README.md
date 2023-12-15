@@ -21,8 +21,8 @@ This is the official pytorch implementation of SPiC-E.
 # Getting Started
 
 ## Getting the repo
-    git clone git@github.com:TAU-VAILab/spic-e_code.git
-    cd spic-e_code
+    git clone git@github.com:TAU-VAILab/spic-e.git
+    cd spic-e
 
 </br>
 
