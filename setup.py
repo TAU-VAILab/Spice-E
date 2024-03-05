@@ -44,6 +44,7 @@ setup(
         "trimesh",
         "pandas",
         "clip @ git+https://github.com/openai/CLIP.git",
+        "plyfile",
     ],
     author="OpenAI",
 )
