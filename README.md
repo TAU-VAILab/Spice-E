@@ -35,7 +35,6 @@ This is the official pytorch implementation of SPiC-E.
     pip install ipywidgets
     yes | apt-get update
     yes | apt-get install xvfb
-    yes | apt install screen
 
 </br>
 
