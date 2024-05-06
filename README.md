@@ -31,22 +31,22 @@ shapes.We show that our approach supports a variety of applications, including
 alternative methods. Importantly, this is accomplished without tailoring our approach for any specific task. We will release our code and trained models.
 
 <p align="center">
-<img src="docs/spice_teaser.png" width="90%"/>  
+<img src="webpage_assets/images/spice_e_teaser.png" width="90%"/>  
 </p>
 </br>
 
 # Getting Started
 
 ## Getting the repo
-    git clone git@github.com:TAU-VAILab/spic-e.git
-    cd spic-e
+    git clone git@github.com:TAU-VAILab/Spice-E.git
+    cd Spice-E
 
 </br>
 
 ## Setting up environment
-    conda create --name spic-e python=3.10 --yes
+    conda create --name Spice-E python=3.10 --yes
     conda init bash
-    conda activate spic-e
+    conda activate Spice-E
     pip install -e .
     pip install pyyaml
     pip install ipywidgets
@@ -76,7 +76,7 @@ For the demo using an guidance shape that is not yet encoded, run:
 
 When finished you should see a 360 rendering video of the output in:
 
-    spic-e/outputs/funky_swivel_chair/output/output.mp4
+    Spice-E/outputs/funky_swivel_chair/output/output.mp4
 </br>
 
 # General Usage
@@ -100,7 +100,7 @@ For the text-conditional abstraction-to-3D dataset we used code from the [Cuboid
 ## Training a SPiC-E model
 We show an example script for training a SPiC-E model for the 3D Stylization task. To train a SPiC-E model for the 3D Stylization task, run:
 
-    python3 train_spice.py -d <path to data folder> -o <path to output folder>
+    python3 train_spice_e.py -d <path to data folder> -o <path to output folder>
 
 ## Inference
 To infer from a trained SPiC-E model using latents that were encoded using the Shap-E encoder, run:
