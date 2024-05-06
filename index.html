@@ -37,8 +37,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <!-- title -->
-    <h1 class="ourh1" align="center">SPiC&middot;E <img class="inline-img" src=".\webpage_assets\images\chili.png" alt=""></h1>
-    <h2 class="ourh2" align="center"><h2_r>S</h2_r>tructural <h2_r>P</h2_r>riors <h2_r>i</h2_r>n 3D Diffusion Models using <h2_r>C</h2_r>ross-<h2_r>E</h2_r>ntity Attention</h2>
+    <h1 class="ourh1" align="center">Spice&middot;E <img class="inline-img" src=".\webpage_assets\images\chili.png" alt=""></h1>
+    <h2 class="ourh2" align="center"><h2_r>S</h2_r>tructural <h2_r>P</h2_r>riors <h2_r>i</h2_r>n 3D Diffusion using <h2_r>C</h2_r>ross-<h2_r>E</h2_r>ntity Attention</h2>
 
     <!-- authors and affiliations -->
     <section class="authors_block">
@@ -271,14 +271,14 @@
                 However, time-consuming optimization procedures are required for synthesizing each sample, hindering
                 their potential for democratizing 3D content creation. Conversely,
                 3D diffusion models now train on million-scale 3D datasets, yielding high-quality text-conditional 3D
-                samples within seconds. In this work, we present SPiC&middot;E - a neural network that adds structural guidance
+                samples within seconds. In this work, we present Spice&middot;E - a neural network that adds structural guidance
                 to 3D diffusion models, extending their usage beyond text-conditional generation. At its core, our framework
                 introduces a cross-entity attention mechanism that allows for multiple entities (in particular, paired input
                 and guidance 3D shapes) to interact via their internal representations within the denoising network.
                 We utilize this mechanism for learning task-specific structural priors in 3D diffusion models from auxiliary
                 guidance shapes. We show that our approach supports a variety of applications, including 3D stylization,
                 semantic shape editing and text-conditional abstraction-to-3D, which transforms primitive-based abstractions
-                into highly-expressive shapes. Extensive experiments demonstrate that SPiC&middot;E achieves SOTA performance over
+                into highly-expressive shapes. Extensive experiments demonstrate that Spice&middot;E achieves SOTA performance over
                 these tasks while often being considerably faster than alternative methods. Importantly, this is accomplished
                 without tailoring our approach for any specific task.
             </p>
@@ -356,7 +356,7 @@
                 our proposed cross-entity attention mechanism (in red). This mechanism mixes their latent representations by
                 carefully combining their Queries functions, allowing for learning task-specific structural priors while
                 preserving the model's generative capabilities.<br></br>
-                🔍 During inference, SPiC&middot;E receives a guidance shape in addition to a target text prompt, enabling the generation of 3D shapes 
+                🔍 During inference, Spice&middot;E receives a guidance shape in addition to a target text prompt, enabling the generation of 3D shapes 
                 (represented as either a neural radiance field or a signed texture field) conditioned on both high-level text directives and low-level
                 structural constraints.<br></br>
                 📋 See our paper for more details on our cross-entity attention mechanism and how we apply it for incorporating structural priors 
