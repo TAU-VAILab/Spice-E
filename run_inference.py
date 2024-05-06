@@ -3,16 +3,12 @@ import torch
 import os
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
-from torch.utils.data import DataLoader
 from shap_e.models.testing_utils import test_model
 from shap_e.diffusion.gaussian_diffusion import diffusion_from_config
 from shap_e.models.download import load_model, load_config
 from shap_e.util.notebooks import create_pan_cameras, decode_latent_images, decode_latent_mesh
 from shap_e.util.data_util import load_or_create_multimodal_batch
-
-
-
+from visualizations.blender_rendering import good_looking_render
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-m', '--model_path', type=str, 
@@ -29,10 +25,8 @@ parser.add_argument('--guidance_scale', type=float, default=7.5,
                     help='guidance scale')
 parser.add_argument('--render_mode', type=str, default='stf',
                     help='the decoding mode to render')
-parser.add_argument('--output_resolution', type=int, default=512, 
+parser.add_argument('--output_resolution', type=int, default=64, 
                     help='resolution of output images')
-parser.add_argument('--save_mesh', action='store_true', default=False, 
-                    help='whether to save mesh as output')
 parser.add_argument('--render_guidance', action='store_true', default=False,
                     help='whether to render the guidance shape')
 parser.add_argument('--input_guidance_object_path', type=str, 
@@ -40,6 +34,8 @@ parser.add_argument('--input_guidance_object_path', type=str,
 parser.add_argument('--mv_image_size', type=int, 
                     help='size of the images', default=256)
 parser.add_argument('--verbose_blender', action='store_true', default=False,
+                    help='if enabled, prints outputs from blender script')
+parser.add_argument('--render_blender', action='store_true', default=False,
                     help='if enabled, prints outputs from blender script')
 
 
@@ -64,11 +60,11 @@ def infer(args, device):
     render_mode = args.render_mode
     assert render_mode in ["stf", "nerf"]
     output_resolution = args.output_resolution
-    save_mesh = args.save_mesh
     render_guidance = args.render_guidance
     input_guidance_object_path = args.input_guidance_object_path
     mv_image_size = args.mv_image_size
     verbose_blender = args.verbose_blender
+    render_in_blender = args.render_blender
     cameras = create_pan_cameras(output_resolution, device)
 
     xm = load_model('transmitter', device=device)
@@ -115,7 +111,11 @@ def infer(args, device):
                 guidance_scale=guidance_scale,
                 render_mode=render_mode,
                 size=output_resolution,
-                save_mesh=save_mesh)
+                save_mesh=True)
+        if render_in_blender:
+            mesh_path = os.path.join(output_path, "output/output.ply")
+            blender_img_path = os.path.join(output_path, "output/blender_output.png")
+            good_looking_render(mesh_path, blender_img_path, plastic=False)
 
         if render_guidance:
             # Rendering Guidance 
@@ -125,19 +125,23 @@ def infer(args, device):
             os.makedirs(cond_path, exist_ok=True)
             torch.save(guidance_shape,os.path.join(cond_path, "condition.pt"))
             videowriter = cv2.VideoWriter(os.path.join(cond_path, 'condition.mp4'),
-                                            cv2.VideoWriter_fourcc(*'mp4v'), 10, (size, size))
+                                            cv2.VideoWriter_fourcc(*'mp4v'), 10, (output_resolution, output_resolution))
             for i, image in enumerate(images):
                 image.save(os.path.join(cond_path, f'{(i):05}.png'))
                 image = np.array(image)
                 image = image[:,:,::-1]
                 videowriter.write(image)
             videowriter.release()
-            if save_mesh:
-                t = decode_latent_mesh(xm, guidance_shape).tri_mesh()
-                with open(os.path.join(cond_path, "condition.obj"), 'w') as f:
-                    t.write_obj(f)
-                with open(os.path.join(cond_path, "condition.ply"), 'wb') as f:
-                    t.write_ply(f)
+            t = decode_latent_mesh(xm, guidance_shape).tri_mesh()
+            with open(os.path.join(cond_path, "condition.obj"), 'w') as f:
+                t.write_obj(f)
+            with open(os.path.join(cond_path, "condition.ply"), 'wb') as f:
+                t.write_ply(f)
+
+            if render_in_blender:
+                mesh_path = os.path.join(cond_path, "condition.ply")
+                blender_img_path = os.path.join(cond_path, "blender_guidance.png")
+                good_looking_render(mesh_path, blender_img_path, render_guidance=True, shade_smooth=False, subdivide=False)
 
         torch.cuda.empty_cache()
 

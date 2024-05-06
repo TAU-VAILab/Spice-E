@@ -45,6 +45,8 @@ setup(
         "pandas",
         "clip @ git+https://github.com/openai/CLIP.git",
         "plyfile",
+        "bpy",
+        "blendertoolbox",
     ],
     author="OpenAI",
 )
