@@ -1,17 +1,34 @@
-# SPiC-E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention
+# Spice·E: Structural Priors in 3D Diffusion using Cross-Entity Attention
 
-This is the official pytorch implementation of SPiC-E.
+This is the official pytorch implementation of Spice·E.
 
 [![arXiv](https://img.shields.io/badge/arXiv-2311.17834-b31b1b.svg)](https://arxiv.org/abs/2311.17834)
+![Generic badge](https://img.shields.io/badge/conf-SIGGRAPH2024-purple.svg)
 
 [[Project Website](https://tau-vailab.github.io/spic-e/)]
-> **SPiC-E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention**<br>
+> **Spice·E: Structural Priors in 3D Diffusion using Cross-Entity Attention**<br>
 > Etai Sella*, Gal Fiebelman*, Noam Atia, Hadar Averbuch-Elor<br>
 > Tel Aviv University<br>
 >\* Denotes equal contribution
 
 >**Abstract** <br>
-> We are witnessing rapid progress in automatically generating and manipulating 3D assets due to the availability of pretrained text-image diffusion models. However, time-consuming optimization procedures are required for synthesizing each sample, hindering their potential for democratizing 3D content creation. Conversely, 3D diffusion models now train on million-scale 3D datasets, yielding high-quality text-conditional 3D samples within seconds. In this work, we present SPiC·E - a neural network that adds structural guidance to 3D diffusion models, extending their usage beyond text-conditional generation. At its core, our framework introduces a cross-entity attention mechanism that allows for multiple entities (in particular, paired input and guidance 3D shapes) to interact via their internal representations within the denoising network. We utilize this mechanism for learning task-specific structural priors in 3D diffusion models from auxiliary guidance shapes. We show that our approach supports a variety of applications, including 3D stylization, semantic shape editing and text-conditional abstraction-to-3D, which transforms primitive-based abstractions into highly-expressive shapes. Extensive experiments demonstrate that SPiC·E achieves SOTA performance over these tasks while often being considerably faster than alternative methods. Importantly, this is accomplished without tailoring our approach for any specific task.
+> We are witnessing rapid progress in automatically generating and manipulating
+3D assets due to the availability of pretrained text-to-image diffusion
+models. However, time-consuming optimization procedures are required
+for synthesizing each sample, hindering their potential for democratizing
+3D content creation. Conversely, 3D diffusion models now train on millionscale
+3D datasets, yielding high-quality text-conditional 3D samples within
+seconds. In this work, we present Spice·E – a neural network that adds
+structural guidance to 3D diffusion models, extending their usage beyond
+text-conditional generation. At its core, our framework introduces a crossentity
+attention mechanism that allows for multiple entities—in particular,
+paired input and guidance 3D shapes—to interact via their internal representations
+within the denoising network.We utilize this mechanism for learning
+task-specific structural priors in 3D diffusion models from auxiliary guidance
+shapes.We show that our approach supports a variety of applications, including
+3D stylization, semantic shape editing and text-conditional abstractionto-
+3D, which transforms primitive-based abstractions into highly-expressive shapes. Extensive experiments demonstrate that Spice·E achieves SOTA performance over these tasks while often being considerably faster than
+alternative methods. Importantly, this is accomplished without tailoring our approach for any specific task. We will release our code and trained models.
 
 <p align="center">
 <img src="docs/spice_teaser.png" width="90%"/>  
