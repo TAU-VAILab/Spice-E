@@ -5,7 +5,7 @@ This is the official pytorch implementation of Spice·E.
 [![arXiv](https://img.shields.io/badge/arXiv-2311.17834-b31b1b.svg)](https://arxiv.org/abs/2311.17834)
 ![Generic badge](https://img.shields.io/badge/conf-SIGGRAPH2024-purple.svg)
 
-[[Project Website](https://tau-vailab.github.io/spic-e/)]
+[[Project Website](https://tau-vailab.github.io/Spice-E/)]
 > **Spice·E: Structural Priors in 3D Diffusion using Cross-Entity Attention**<br>
 > Etai Sella*, Gal Fiebelman*, Noam Atia, Hadar Averbuch-Elor<br>
 > Tel Aviv University<br>
