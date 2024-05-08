@@ -29,7 +29,10 @@ h2_r {
 
 h5 {
     font-family: "Noto Sans", Arial;
-    font-size: 20px;
+    font-size: 22px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	color: rgb(110, 110, 110);
 }
 
 p {
