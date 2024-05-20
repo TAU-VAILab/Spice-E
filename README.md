@@ -5,7 +5,7 @@ This is the official pytorch implementation of Spice·E.
 [![arXiv](https://img.shields.io/badge/arXiv-2311.17834-b31b1b.svg)](https://arxiv.org/abs/2311.17834)
 ![Generic badge](https://img.shields.io/badge/conf-SIGGRAPH2024-purple.svg)
 
-[[Project Website](https://tau-vailab.github.io/spic-e/)]
+[[Project Website](https://tau-vailab.github.io/Spice-E/)]
 > **Spice·E: Structural Priors in 3D Diffusion using Cross-Entity Attention**<br>
 > Etai Sella*, Gal Fiebelman*, Noam Atia, Hadar Averbuch-Elor<br>
 > Tel Aviv University<br>
@@ -45,13 +45,10 @@ alternative methods. Importantly, this is accomplished without tailoring our app
 
 ## Setting up environment
     conda create --name Spice-E python=3.10 --yes
-    conda init bash
     conda activate Spice-E
     pip install -e .
     pip install pyyaml
     pip install ipywidgets
-    yes | apt-get update
-    yes | apt-get install xvfb
 
 </br>
 
@@ -62,7 +59,7 @@ alternative methods. Importantly, this is accomplished without tailoring our app
 `export BLENDER_PATH=\<path to your unzipped blender-3.4.1-linux-x64.tar.xz file\>/blender` </br>
 
 ## Running The Demo
-Download the text-conditional abstraction-to-3D "chair" model from [here](https://drive.google.com/drive/folders/1EaB4SYMNTIdNG3rS8KTylhXNJVL2ljr8?usp=sharing).</br>
+Download the "spice_e_abstract_to_3d_chair" model from [here](https://drive.google.com/drive/folders/1cc2WWV8F_wX3NUpCtEzyLjySiUmQePue?usp=drive_link).</br>
 For the demo using an already encoded guidance shape, run:
 
     python3 run_inference.py -m <path to downloaded chair model> -d demo/latent_inference/demo_latent.pt -o outputs -p "funky swivel chair"
@@ -97,17 +94,17 @@ To create a latent dataset for the 3D Stylization task with refined annotations,
 </br>
 For the text-conditional abstraction-to-3D dataset we used code from the [CuboidAbstractionViaSeg](https://github.com/SilenKZYoung/CuboidAbstractionViaSeg) repo and for the semantic shape editing dataset we used code from the [changeit3d](https://github.com/optas/changeit3d) repo.<br>
 
-## Training a SPiC-E model
-We show an example script for training a SPiC-E model for the 3D Stylization task. To train a SPiC-E model for the 3D Stylization task, run:
+## Training a Spice-E model
+We show an example script for training a Spice-E model for the 3D Stylization task. To train a Spice-E model for the 3D Stylization task, run:
 
     python3 train_spice_e.py -d <path to data folder> -o <path to output folder>
 
 ## Inference
-To infer from a trained SPiC-E model using latents that were encoded using the Shap-E encoder, run:
+To infer from a trained Spice-E model using latents that were encoded using the Shap-E encoder, run:
 
     python3 run_inference.py -m <path to downloaded chair model> -d <path to the guidance shape latent> -o <path to output folder> -p <text prompt>
 
-To infer from a trained SPiC-E model using a 3D guidance shape that has not been encoded using the Shap-E encoder, run:
+To infer from a trained Spice-E model using a 3D guidance shape that has not been encoded using the Shap-E encoder, run:
 
     python3 run_inference.py -m <path to downloaded chair model> -d <path to folder in which to save the encoded guidance shape latent> -o <path to output folder> -p <text prompt> --encode_guidance --input_guidance_object_path <path to input 3D guidance shape>
 
@@ -117,10 +114,12 @@ To infer from a trained SPiC-E model using a 3D guidance shape that has not been
 If you find our work useful in your research, please consider citing:
 
     @article{sella2023spic,
-     title={SPiC-E: Structural Priors in 3D Diffusion Models using Cross Entity Attention},
-     author={Sella, Etai and Fiebelman, Gal and Atia, Noam and Averbuch-Elor, Hadar},
-     journal={arXiv preprint arXiv:2311.17834},
-     year={2023}
+     title={Spice-E : Structural Priors in 3D Diffusion using Cross-Entity Attention},
+     author={Etai Sella and Gal Fiebelman and Noam Atia and Hadar Averbuch-Elor},
+     year={2024},
+     eprint={2311.17834},
+     archivePrefix={arXiv},
+     primaryClass={cs.CV}
     }
     
 </br>

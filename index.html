@@ -9,21 +9,21 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <meta property="og:site_name" content="SPiC&middot;E" />
+    <meta property="og:site_name" content="Spice&middot;E" />
     <meta property="og:type" content="video.other" />
-    <meta property="og:title" content="SPiC&middot;E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention" />
+    <meta property="og:title" content="Spice&middot;E: Structural Priors in 3D Diffusion using Cross-Entity Attention" />
     <meta property="og:description" content="" />
-    <meta property="og:url" content="https://tau-vailab.github.io/spic-e/" />
-    <meta property="og:image" content="https://tau-vailab.github.io/spic-e/webpage_assets/images/spice_sample2.png" />
+    <meta property="og:url" content="https://tau-vailab.github.io/Spice-E/" />
+    <meta property="og:image" content="https://tau-vailab.github.io/Spice-E/webpage_assets/images/spice_sample2.png" />
 
-    <meta property="article:publisher" content="https://tau-vailab.github.io/spic-e/" />
+    <meta property="article:publisher" content="https://tau-vailab.github.io/Spice-E/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="SPiC&middot;E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention" />
+    <meta name="twitter:title" content="Spice&middot;E: Structural Priors in 3D Diffusion using Cross-Entity Attention" />
     <meta name="twitter:description" content="" />
-    <meta name="twitter:url" content="https://tau-vailab.github.io/spic-e/" />
-    <meta name="twitter:image" content="https://tau-vailab.github.io/spic-e/webpage_assets/images/spice_sample2.png" />
+    <meta name="twitter:url" content="https://tau-vailab.github.io/Spice-E/" />
+    <meta name="twitter:image" content="https://tau-vailab.github.io/Spice-E/webpage_assets/images/spice_sample2.png" />
 
-    <title>SPiC&middot;E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention</title>
+    <title>Spice&middot;E: Structural Priors in 3D Diffusion using Cross-Entity Attention</title>
 <!--    <link rel="icon" href="../pics/wis_logo.jpg">-->
     <link rel="icon" href="./webpage_assets/images/chili.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -37,9 +37,10 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <!-- title -->
-    <h1 class="ourh1" align="center">SPiC&middot;E <img class="inline-img" src=".\webpage_assets\images\chili.png" alt=""></h1>
-    <h2 class="ourh2" align="center"><h2_r>S</h2_r>tructural <h2_r>P</h2_r>riors <h2_r>i</h2_r>n 3D Diffusion Models using <h2_r>C</h2_r>ross-<h2_r>E</h2_r>ntity Attention</h2>
-
+    <h1 class="ourh1" align="center">Spice&middot;E <img class="inline-img" src=".\webpage_assets\images\chili.png" alt=""></h1>
+    <h2 class="ourh2" align="center"><h2_r>S</h2_r>tructural <h2_r>P</h2_r>riors <h2_r>i</h2_r>n 3D Diffusion using <h2_r>C</h2_r>ross-<h2_r>E</h2_r>ntity Attention</h2>
+	<h5 class="conference" align="center">SIGGRAPH 2024 (Conference Proceedings)</h5>
+	
     <!-- authors and affiliations -->
     <section class="authors_block">
         <div class="authors" align="center">
@@ -271,14 +272,14 @@
                 However, time-consuming optimization procedures are required for synthesizing each sample, hindering
                 their potential for democratizing 3D content creation. Conversely,
                 3D diffusion models now train on million-scale 3D datasets, yielding high-quality text-conditional 3D
-                samples within seconds. In this work, we present SPiC&middot;E - a neural network that adds structural guidance
+                samples within seconds. In this work, we present Spice&middot;E - a neural network that adds structural guidance
                 to 3D diffusion models, extending their usage beyond text-conditional generation. At its core, our framework
                 introduces a cross-entity attention mechanism that allows for multiple entities (in particular, paired input
                 and guidance 3D shapes) to interact via their internal representations within the denoising network.
                 We utilize this mechanism for learning task-specific structural priors in 3D diffusion models from auxiliary
                 guidance shapes. We show that our approach supports a variety of applications, including 3D stylization,
                 semantic shape editing and text-conditional abstraction-to-3D, which transforms primitive-based abstractions
-                into highly-expressive shapes. Extensive experiments demonstrate that SPiC&middot;E achieves SOTA performance over
+                into highly-expressive shapes. Extensive experiments demonstrate that Spice&middot;E achieves SOTA performance over
                 these tasks while often being considerably faster than alternative methods. Importantly, this is accomplished
                 without tailoring our approach for any specific task.
             </p>
@@ -335,7 +336,7 @@
             <br></br>               
             <span class="interactive_bold">Select a guidance primitive-based abstraction and then select
                 one of the text prompts to view structure and text conditional tables generated with our method. <br>
-                As illustrated in this interactive visualization, SPiC-E allows for enforcing structural priors while conveying the target text prompt.</span>
+                As illustrated in this interactive visualization, Spice&middot;E allows for enforcing structural priors while conveying the target text prompt.</span>
         </div>
     </section>
 
@@ -344,9 +345,10 @@
         <div class="method-container">
             <hr>
             <h2 align="center">How does it work?</h2>
+		<br>
             <div class="im_container has-text-justified" width="90%" align="center">
                 <img align="center" src="./webpage_assets/images/es_method_figure.png" alt="Overview" width="100%">
-            </div>            
+            </div> 
             <p class="has-text-justified">
                 <br>
                 🌍 We finetune a transformer-based diffusion model, as exemplified by <a href="https://github.com/openai/shap-e">Shap&middot;E</a>
@@ -356,7 +358,7 @@
                 our proposed cross-entity attention mechanism (in red). This mechanism mixes their latent representations by
                 carefully combining their Queries functions, allowing for learning task-specific structural priors while
                 preserving the model's generative capabilities.<br></br>
-                🔍 During inference, SPiC&middot;E receives a guidance shape in addition to a target text prompt, enabling the generation of 3D shapes 
+                🔍 During inference, Spice&middot;E receives a guidance shape in addition to a target text prompt, enabling the generation of 3D shapes 
                 (represented as either a neural radiance field or a signed texture field) conditioned on both high-level text directives and low-level
                 structural constraints.<br></br>
                 📋 See our paper for more details on our cross-entity attention mechanism and how we apply it for incorporating structural priors 
@@ -375,10 +377,10 @@
             <h2 align="center">BibTeX</h2>
             <div class="code-container" align="left">
                 <code>
-                  @misc{sella2023spice, <br>
-                &emsp;   &emsp; title={SPiC-E: Structural Priors in 3D Diffusion Models using Cross-Entity Attention}, <br>
+                  @misc{sella2024spicee, <br>
+                &emsp;   &emsp; title={Spice-E : Structural Priors in 3D Diffusion using Cross-Entity Attention}, <br>
                 &emsp;   &emsp; author={Etai Sella and Gal Fiebelman and Noam Atia and Hadar Averbuch-Elor}, <br>
-                &emsp;   &emsp; year={2023}, <br>
+                &emsp;   &emsp; year={2024}, <br>
                 &emsp;   &emsp; eprint={2311.17834},<br>
                 &emsp;   &emsp; archivePrefix={arXiv},<br>
                 &emsp;   &emsp; primaryClass={cs.CV}<br>
@@ -389,16 +391,17 @@
         </div>
     </section>
 
-    <!-- Acknowledgements -->
-    <!-- <section class="ack-section" width="100%"> -->
-    <!--     <div class="ack-container"> -->
-    <!--         <hr> -->
-    <!--         <h2 align="center">Acknowledgements</h2> -->
-    <!--         <p> -->
-    <!--             We would like to acknowledge such and such for this and that. -->
-    <!--         </p> -->
-    <!--     </div> -->
-    <!-- </section> -->
+<!--    Acknowledgements -->
+    <section class="ack-section" width="100%"> 
+        <div class="ack-container">
+            <hr> 
+            <h2 align="center">Acknowledgements</h2> 
+            <p> 
+                We thank Peter Hedman, Ron Mokadi, Daniel Garibi, Itai Lang and Or Patashnik for helpful discussions. <br>
+				This work was supported by the Israel Science Foundation (grant no. 2510/23) and by the Alon Scholarship.
+            </p> 
+        </div> 
+    </section> 
 
   <p><br>
   </p>
