@@ -17,6 +17,9 @@ parser.add_argument('--num_frames', type=int, default=100, help='number of video
 parser.add_argument('--num_samples', type=int, default=100, help='number of samples for rendering', required=False)
 parser.add_argument('--exposure', type=float, default=1.5, help='exposure in rendering', required=False)
 parser.add_argument('--init_z_rotation', type=int, default=0, help='initial z axis rotation of shape', required=False)
+parser.add_argument('--guidance', action='store_true', help='render as guidance', required=False)
+parser.add_argument('--tint', action='store_true', help='render with tint (for shape editing outputs)', required=False)
+parser.add_argument('--load_mesh', action='store_true', help='loads mesh directly instead of latent', required=False)
 
 def alpha_blend_with_mask(foreground, background, mask): # modified func from link
     # Convert uint8 to float
@@ -42,15 +45,17 @@ def infer(args, device):
     # create output dir if it doesn't exist
     os.makedirs(args.output_dir, exist_ok=True)   
 
-    # load latent and add noise to it
-    input_latent = torch.load(args.data_path)
-
     with torch.no_grad():
-        # Rendering Latent
-        t = decode_latent_mesh(xm, input_latent).tri_mesh()
-        mesh_path = os.path.join(args.output_dir, "mesh.ply")
-        with open(mesh_path, 'wb') as f:
-            t.write_ply(f)
+        if args.load_mesh:
+            mesh_path = args.data_path
+        else:
+            # Rendering Latent
+            # load latent and add noise to it
+            input_latent = torch.load(args.data_path)
+            t = decode_latent_mesh(xm, input_latent).tri_mesh()
+            mesh_path = os.path.join(args.output_dir, "mesh.ply")
+            with open(mesh_path, 'wb') as f:
+                t.write_ply(f)
         
         for i in range(args.num_frames):
             rotation_addition = (360 / args.num_frames) * i
@@ -59,7 +64,9 @@ def infer(args, device):
                                                         z_rotation=z_rotation,
                                                         resolution_x=args.resolution_x,
                                                         resolution_y=args.resolution_y,
-                                                        num_samples=args.num_samples, 
+                                                        tint=args.tint,
+                                                        num_samples=args.num_samples,
+                                                        render_guidance=args.guidance, 
                                                         exposure=args.exposure)
         
         # Create video from all the frames in the output directory

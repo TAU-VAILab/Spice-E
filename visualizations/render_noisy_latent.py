@@ -82,7 +82,7 @@ def infer(args, device):
                     t.write_ply(f)
 
                 blender_img_path = os.path.join(output_dir, f"noisy_ch{i}_of_{args.noise_chunks}_blender.png")
-                good_looking_render(mesh_path, blender_img_path)
+                good_looking_render(mesh_path, blender_img_path, z_rotation=55)
 
             torch.cuda.empty_cache()
 
