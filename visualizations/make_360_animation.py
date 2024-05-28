@@ -20,6 +20,12 @@ parser.add_argument('--init_z_rotation', type=int, default=0, help='initial z ax
 parser.add_argument('--guidance', action='store_true', help='render as guidance', required=False)
 parser.add_argument('--tint', action='store_true', help='render with tint (for shape editing outputs)', required=False)
 parser.add_argument('--load_mesh', action='store_true', help='loads mesh directly instead of latent', required=False)
+parser.add_argument('--crop_r', type=int, default=0, help='crop pixels on right', required=False)
+parser.add_argument('--crop_l', type=int, default=0, help='crop pixels on left', required=False)
+parser.add_argument('--crop_t', type=int, default=0, help='crop pixels on top', required=False)
+parser.add_argument('--crop_b', type=int, default=0, help='crop pixels on bottom', required=False)
+parser.add_argument('--background_intensity', type=int, default=255, help='background intensity (grayscale color)', required=False)
+
 
 def alpha_blend_with_mask(foreground, background, mask): # modified func from link
     # Convert uint8 to float
@@ -71,13 +77,17 @@ def infer(args, device):
         
         # Create video from all the frames in the output directory
         video_path = os.path.join(args.output_dir, "video.mp4")
-        out = cv2.VideoWriter(video_path, cv2.VideoWriter_fourcc(*'mp4v'), 30, (args.resolution_x, args.resolution_y))
+        out = cv2.VideoWriter(video_path, 
+                              cv2.VideoWriter_fourcc(*'mp4v'), 
+                              30, 
+                              (args.resolution_x - args.crop_r - args.crop_l, args.resolution_y - args.crop_t - args.crop_b))
         for i in range(args.num_frames):
             img = cv2.imread(os.path.join(args.output_dir, f"frame_{i:05}.png"), cv2.IMREAD_UNCHANGED)
             mask = img[:,:,3]
             foreground = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
-            background = np.ones_like(foreground) * 255
+            background = np.ones_like(foreground) * args.background_intensity
             img = alpha_blend_with_mask(foreground, background, mask)
+            img = img[args.crop_t:args.resolution_y-args.crop_b, args.crop_l:args.resolution_x-args.crop_r]
             out.write(img)
         out.release()
 

@@ -70,6 +70,7 @@ def good_looking_render(meshPath,
     print("NOT SETTING PLASTIC")
     if plastic:
         RGBA = (130.0/255, 130.0/255, 130.0/255, 1)
+        #RGBA = (130.0/255, 100.0/255, 100.0/255, 1)
         if tint:
             RGBA = (100.0/255, 130.0/255, 130.0/255, 1)
         meshColor = bt.colorObj(RGBA, 0.5, 1.0, 1.0, 0.0, 2.0)
