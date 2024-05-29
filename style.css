@@ -356,6 +356,10 @@ button {
     margin-bottom: 30px;
 }
 
+.fixed-height-row {
+	min-height: 50%;
+}
+
 @media	(max-width: 600px){
 	.page-container {
 		width: 90%;
@@ -460,7 +464,4 @@ button {
 		font-size: 110%;
 	}
 	
-	.fixed-height-row {
-		min-height: 50%;
-	}
 }
