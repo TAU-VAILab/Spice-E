@@ -108,17 +108,42 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
+		  <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <table class="slide-table" width="100%" align="center">
+                <tbody>
+                    <tr>
+                        <th colspan="2" width="90%" class="prompt_title_red" align="center">A Birthday Cupcake</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <video loop autoplay  muted width="95%"  class="result-video">
+                                <source src="webpage_assets/videos/cupcake_reduced_30fps.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="45%">
+                            <div align="center" class="video-label-slides">Guidance</div>
+                        </td>
+                        <td width="41%">
+                            <div align="center" class="video-label-slides">Output&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
           <!-- Slide 1 -->
           <div class="swiper-slide">
             <table class="slide-table" width="100%" align="center">
                 <tbody>
                     <tr>
-                        <th colspan="2" width="90%" class="prompt_title_green" align="center">Its top is not connected from its center to the leg</th>
+                        <th colspan="2" width="90%" class="prompt_title_green" align="center">It has a Pagoda like feature</th>
                     </tr>
                     <tr>
                         <td colspan="2">
                             <video loop autoplay  muted width="95%"  class="result-video">
-                                <source src="webpage_assets/videos/top.mp4" type="video/mp4">
+                                <source src="webpage_assets/videos/pagoda_reduced.mp4" type="video/mp4">
                             </video>
                         </td>
                     </tr>
@@ -138,37 +163,12 @@
             <table class="slide-table" width="100%" align="center">
                 <tbody>
                  <tr>
-                        <th colspan="2" width="90%" class="prompt_title_blue" align="center">A funky swivel chair</th>
+                        <th colspan="2" width="90%" class="prompt_title_blue" align="center">A chair made out of bubblegum</th>
                     </tr>
                     <tr>
                         <td colspan="2">
                             <video loop autoplay  muted width="95%"  class="result-video">
-                                <source src="webpage_assets/videos/swivel.mp4" type="video/mp4">
-                            </video>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="45%">
-                            <div align="center" class="video-label-slides">Guidance</div>
-                        </td>
-                        <td width="41%">
-                            <div align="center" class="video-label-slides">Output&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-          </div>
-          <!-- Slide 3 -->
-          <div class="swiper-slide">
-            <table class="slide-table" width="100%" align="center">
-                <tbody>
-                    <tr>
-                        <th colspan="2" width="90%" class="prompt_title_red" align="center">A candle</th>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <video loop autoplay  muted width="95%"  class="result-video">
-                                <source src="webpage_assets/videos/candle.mp4" type="video/mp4">
+                                <source src="webpage_assets/videos/bubblegum_reduced.mp4" type="video/mp4">
                             </video>
                         </td>
                     </tr>
@@ -188,12 +188,12 @@
             <table class="slide-table" width="100%" align="center">
                 <tbody>
                     <tr>
-                        <th colspan="2" width="90%" class="prompt_title_blue" align="center">A spaceship</th>
+                        <th colspan="2" width="90%" class="prompt_title_green" align="center">It has less spindles in the backrest</th>
                     </tr>
                     <tr>
                         <td colspan="2">
                             <video loop autoplay muted width="95%"  class="result-video">
-                                <source src="webpage_assets/videos/spaceship.mp4" type="video/mp4">
+                                <source src="webpage_assets/videos/spindles_reduced.mp4" type="video/mp4">
                             </video>
                         </td>
                     </tr>
@@ -213,12 +213,12 @@
             <table class="slide-table" width="100%" align="center">
                 <tbody>
                     <tr>
-                        <th colspan="2" width="90%" class="prompt_title_green" align="center">The seat has a rounded edge</th>
+                        <th colspan="2" width="90%" class="prompt_title_red" align="center">A Witch's Hat</th>
                     </tr>
                     <tr>
                         <td colspan="2">
                             <video loop autoplay  muted width="95%"  class="result-video">
-                                <source src="webpage_assets/videos/round.mp4" type="video/mp4">
+                                <source src="webpage_assets/videos/witchhat_reduced.mp4" type="video/mp4">
                             </video>
                         </td>
                     </tr>
@@ -296,23 +296,21 @@
         <div class="abstract-container has-text-justified">
             <hr>
             <h2 align="center">Examples of Text-conditional Abstraction-to-3D Results</h2><br></br>
-            <table class="interactive-table" width="100%" align="center">
+            <table class="interactive-table" width="80%" align="center">
                 <tr>
-                    <td align="center">
-                        <button class="prompt_title_black_small" onclick="playVideo('video3', '')">Abstraction #1</button>
+                    <td align="center" >
+                        <button class="prompt_title_black_small" onclick="playVideo('video3', '')" >Abstraction #1</button>
                     </td>
                     <td align="center">
+						<a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
                         <button class="prompt_title_black_small" onclick="playVideo('video2', '')">Abstraction #2</button>
                     </td>
                     <td align="center">
                         <button class="prompt_title_black_small" onclick="playVideo('video1', '')">Abstraction #3</button>
                     </td>
-                    <td align="center">
-                        <button class="prompt_title_black_small" onclick="playVideo('video4', '')">Abstraction #4</button>
-                    </td>
                 </tr>
                 <tr class="fixed-height-row" id="videoRow">
-                    <td align="center" colspan="4">
+                    <td class="interactiv_vid" align="center" colspan="3">
                         <video id="videoPlayer" loop autoplay muted width="50%" class="result-video">
                             <source src="./webpage_assets/videos/interactive/video3.mp4" type="video/mp4">
                         </video>
@@ -323,13 +321,11 @@
                         <button class="prompt_title_blue_small" onclick="switchVideo('_a')">A billiard table</button>
                     </td>
                     <td align="center">
-                        <button class="prompt_title_blue_small" onclick="switchVideo('_b')">A glass table</button>
+						<a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
+                        <button class="prompt_title_blue_small" onclick="switchVideo('_b')">A ping pong table</button>
                     </td>
                     <td align="center">
-                        <button class="prompt_title_blue_small" onclick="switchVideo('_c')">A ping pong table</button>
-                    </td>
-                    <td align="center">
-                        <button class="prompt_title_blue_small" onclick="switchVideo('_d')">A round coffee table</button>
+                        <button class="prompt_title_blue_small" onclick="switchVideo('_c')">A round coffee table</button>
                     </td>
                 </tr>
             </table>
