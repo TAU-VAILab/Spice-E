@@ -59,7 +59,7 @@ alternative methods. Importantly, this is accomplished without tailoring our app
 `export BLENDER_PATH=\<path to your unzipped blender-3.4.1-linux-x64.tar.xz file\>/blender` </br>
 
 ## Running The Demo
-Download the "spice_e_abstract_to_3d_chair" model from [here](https://drive.google.com/file/d/1c28-u-wY9GGnBeVblgSgGCELk5FHaU05/view?usp=sharing).</br>
+Download the "spice_e_abstract_to_3d_chair" model (around 2.5 GB) from [here](https://drive.google.com/file/d/1c28-u-wY9GGnBeVblgSgGCELk5FHaU05/view?usp=sharing).</br>
 For the demo using an already encoded guidance shape, run:
 
     python3 run_inference.py -m <path to downloaded chair model> -d demo/latent_inference/demo_latent.pt -o outputs -p "funky swivel chair"
