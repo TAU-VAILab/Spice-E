@@ -88,7 +88,7 @@ To create a latent dataset for the 3D Stylization task, run:
 
     python3 get_stylization_latents.py -o <path to output folder>
 
-To create a latent dataset for the 3D Stylization task with refined annotations, download the finetuned blip model dir from [here](https://drive.google.com/drive/folders/1lxtIL2aLGqJe2foZwoz91nlVu1LOUlRL?usp=sharing) and run:
+To create a latent dataset for the 3D Stylization task with refined annotations, download the finetuned blip model dir from [here](https://drive.google.com/drive/folders/1MnFKZMChZrx3BWxNWvXjjfB7rMWoqMr3?usp=sharing) and run:
 
     python3 get_stylization_latents.py -o <path to output folder> --use_blip_refinement --blip_model_path <path to downloaded finetuned blip model dir>
 </br>
