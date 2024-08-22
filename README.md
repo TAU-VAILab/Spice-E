@@ -79,7 +79,7 @@ When finished you should see a 360 rendering video of the output in:
 # General Usage
 
 ## Getting the trained models
-All the trained models used in the paper can be downloaded from [here](https://drive.google.com/drive/folders/1cc2WWV8F_wX3NUpCtEzyLjySiUmQePue?usp=sharing) 
+All the trained models used in the paper can be downloaded from [here](https://drive.google.com/drive/folders/1CxUk7BVvjPuTP5p2IMvwfjjG3s7hm2kS?usp=sharing) 
 </br>
 
 ## Creating a latent dataset
