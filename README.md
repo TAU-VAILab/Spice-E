@@ -84,10 +84,6 @@ All the trained models used in the paper can be downloaded from [here](https://d
 
 ## Creating a latent dataset
 We show an example script for creating a latent dataset for the 3D Stylization task.<br>
-To create a latent dataset for the 3D Stylization task, run:
-
-    python3 get_stylization_latents.py -o <path to output folder>
-
 To create a latent dataset for the 3D Stylization task with refined annotations, download the finetuned blip model dir from [here](https://drive.google.com/drive/folders/1MnFKZMChZrx3BWxNWvXjjfB7rMWoqMr3?usp=sharing) and run:
 
     python3 get_stylization_latents.py -o <path to output folder> --use_blip_refinement --blip_model_path <path to downloaded finetuned blip model dir>
@@ -102,11 +98,11 @@ We show an example script for training a Spice-E model for the 3D Stylization ta
 ## Inference
 To infer from a trained Spice-E model using latents that were encoded using the Shap-E encoder, run:
 
-    python3 run_inference.py -m <path to downloaded chair model> -d <path to the guidance shape latent> -o <path to output folder> -p <text prompt>
+    python3 run_inference.py -m <path to model> -d <path to the guidance shape latent> -o <path to output folder> -p <text prompt>
 
 To infer from a trained Spice-E model using a 3D guidance shape that has not been encoded using the Shap-E encoder, run:
 
-    python3 run_inference.py -m <path to downloaded chair model> -d <path to folder in which to save the encoded guidance shape latent> -o <path to output folder> -p <text prompt> --encode_guidance --input_guidance_object_path <path to input 3D guidance shape>
+    python3 run_inference.py -m <path to model> -d <path to folder in which to save the encoded guidance shape latent> -o <path to output folder> -p <text prompt> --encode_guidance --input_guidance_object_path <path to input 3D guidance shape>
 
 <br>
 
