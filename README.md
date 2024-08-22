@@ -47,8 +47,6 @@ alternative methods. Importantly, this is accomplished without tailoring our app
     conda create --name Spice-E python=3.10 --yes
     conda activate Spice-E
     pip install -e .
-    pip install pyyaml
-    pip install ipywidgets
 
 </br>
 
