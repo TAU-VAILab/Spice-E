@@ -86,14 +86,14 @@ All the trained models used in the paper can be downloaded from [here](https://d
 We show an example script for creating a latent dataset for the 3D Stylization task.<br>
 To create a latent dataset for the 3D Stylization task with refined annotations, download the finetuned blip model dir from [here](https://drive.google.com/drive/folders/1MnFKZMChZrx3BWxNWvXjjfB7rMWoqMr3?usp=sharing) and run:
 
-    python3 get_stylization_latents.py -o <path to output folder> --use_blip_refinement --blip_model_path <path to downloaded finetuned blip model dir> --make_gray
+    python3 get_stylization_latents.py -o <path to output folder> --use_blip_refinement --blip_model_path <path to downloaded finetuned blip model dir> --make_gray -n <number of objects trying to download in total>
 </br>
 For the text-conditional abstraction-to-3D dataset we used code from the [CuboidAbstractionViaSeg](https://github.com/SilenKZYoung/CuboidAbstractionViaSeg) repo and for the semantic shape editing dataset we used code from the [changeit3d](https://github.com/optas/changeit3d) repo.<br>
 
 ## Training a Spice-E model
-We show an example script for training a Spice-E model for the 3D Stylization task. To train a Spice-E model for the 3D Stylization task, run:
+We show an example script for training a Spice-E model for the 3D Stylization task. First, split the downloaded objects (a folder per object) from the previous step into test and train folders. To train a Spice-E model for the 3D Stylization task, run:
 
-    python3 train_spice.py -d <path to data folder> -o <path to output folder>
+    python3 train_spice.py -d <path to data folder with train/test folders> -o <path to output folder> -b <batch size (must be at most the size of the smaller between your train and test set)>
 
 ## Inference
 To infer from a trained Spice-E model using latents that were encoded using the Shap-E encoder, run:
