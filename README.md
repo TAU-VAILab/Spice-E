@@ -50,13 +50,16 @@ alternative methods. Importantly, this is accomplished without tailoring our app
 
 </br>
 
-## Setting up blender
+## Setting up blender (Optional)
+Blender is used for encoding 3D objects into the latent space used in Spice-E (and SHAP-E) and rendering good looking images of Spice-E results. </br>
+This is optional, but if you want to use it please follow the instructions below:
+
 1) Get 'blender-3.4.1-linux-x64.tar.xz' from [here](https://mirrors.aliyun.com/blender/release/Blender3.4/).
 2) Unzip it
 3) Set your BLENDER_PATH environment by running: </br>
 `export BLENDER_PATH=\<path to your unzipped blender-3.4.1-linux-x64.tar.xz file\>/blender` </br>
 
-## Running The Demo
+## Running the demo
 Download the "spice_e_abstract_to_3d_chair" model (around 2.5 GB) from [here](https://drive.google.com/file/d/1c28-u-wY9GGnBeVblgSgGCELk5FHaU05/view?usp=sharing).</br>
 For the demo using an already encoded guidance shape, run:
 
